@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="14E46" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="6254"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8173.3"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -668,17 +668,131 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="GPUImageSandBox" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="m2S-Jp-Qdl" customClass="GPUImageView">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                    <view key="view" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="975" height="392"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8e-J8-5QM">
+                                <rect key="frame" x="0.0" y="232" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dkn-FP-sno">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="GPUImagePolkaDotFilter" id="TiH-LP-vbc">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5E4-7K-R4D" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXO-FA-8qB">
+                                <rect key="frame" x="245" y="232" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42S-Mc-59S">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="GPUImageGrayscaleFilter" id="vZG-Ke-mj0">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sc6-0P-7ri" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fwc-xU-hWj">
+                                <rect key="frame" x="490" y="232" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vfu-gJ-CjD">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="GPUImageBrightnessFilter" id="Byf-Ae-zS2">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FY4-1h-u5z" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeV-EO-VIg">
+                                <rect key="frame" x="245" y="73" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7r3-KL-0yi">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Z6M-hN-hTf">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IVE-Vk-ieK" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-YR-kTH">
+                                <rect key="frame" x="490" y="73" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6KJ-P4-TW2">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Xfy-sa-jxq">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2E6-5t-q96" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qqx-ob-es4">
+                                <rect key="frame" x="735" y="232" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Lx-fw-ZKz">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="GPUImageExposureFilter" id="1n1-hW-MjH">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1k-K6-Lhi" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
+                        </subviews>
                     </view>
                     <connections>
-                        <outlet property="screenView" destination="m2S-Jp-Qdl" id="5AX-3q-Z35"/>
+                        <outlet property="screen0" destination="5E4-7K-R4D" id="Y0o-43-4cM"/>
+                        <outlet property="screen1" destination="sc6-0P-7ri" id="moi-XF-ZRa"/>
+                        <outlet property="screen2" destination="FY4-1h-u5z" id="RVm-lX-4Ji"/>
+                        <outlet property="screen3" destination="B1k-K6-Lhi" id="xfb-5H-ITp"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="245.5" y="759"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="892-oc-bbH">
+            <objects>
+                <viewController id="pQJ-uf-6c5" sceneMemberID="viewController">
+                    <view key="view" id="fdB-FT-FVE">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="SxK-WS-2c5" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="179" y="1149"/>
         </scene>
     </scenes>
 </document>

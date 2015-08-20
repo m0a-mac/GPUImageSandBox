@@ -14,13 +14,49 @@ class ViewController: NSViewController {
 
     var videoCamera: GPUImageAVCamera?
     
-    @IBOutlet var screenView: GPUImageView!
+    @IBOutlet var screen0 : GPUImageView!
+    @IBOutlet var screen1 : GPUImageView!
+    @IBOutlet weak var screen2: GPUImageView!
+    @IBOutlet weak var screen3: GPUImageView!
+    
+    var filter0: GPUImagePolkaDotFilter?
+    var filter1: GPUImageGrayscaleFilter?
+    var filter2: GPUImageBrightnessFilter?
+    var filter3: GPUImageExposureFilter?
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        videoCamera = GPUImageAVCamera(sessionPreset: AVCaptureSessionPreset1280x720, cameraDevice:nil)
-
-        // Do any additional setup after loading the view.
-        videoCamera?.addTarget(screenView!)
+//        videoCamera = GPUImageAVCamera(sessionPreset: AVCaptureSessionPreset1280x720, cameraDevice:nil)
+        videoCamera = GPUImageAVCamera(sessionPreset: AVCaptureSessionPreset320x240, cameraDevice:nil)
+        videoCamera?.horizontallyMirrorRearFacingCamera = false
+        videoCamera?.horizontallyMirrorFrontFacingCamera = false
+        
+        filter0 = GPUImagePolkaDotFilter()
+        filter1 = GPUImageGrayscaleFilter()
+        
+        filter2 = GPUImageBrightnessFilter()
+        filter2?.brightness = 0.9
+        
+        filter3 = GPUImageExposureFilter()
+        filter3?.exposure = 8.0
+        
+        
+        videoCamera?.addTarget(filter0)
+        videoCamera?.addTarget(filter1)
+        videoCamera?.addTarget(filter2)
+        videoCamera?.addTarget(filter3)
+        
+        
+        filter0?.addTarget(screen0)
+        filter1?.addTarget(screen1)
+        filter2?.addTarget(screen2)
+        filter3?.addTarget(screen3)
+        
+        screen0?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
+        screen1?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
+        screen2?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
+        screen3?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         
         videoCamera!.startCameraCapture()
 
