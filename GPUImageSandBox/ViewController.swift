@@ -53,10 +53,18 @@ class ViewController: NSViewController {
         filter2?.addTarget(screen2)
         filter3?.addTarget(screen3)
         
+        filter3?.frameProcessingCompletionBlock = { (output:GPUImageOutput!, time:CMTime)  in
+            print("run comp block\n")
+        }
+        
+        
+        
         screen0?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         screen1?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         screen2?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         screen3?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
+        
+        
         
         videoCamera!.startCameraCapture()
 
