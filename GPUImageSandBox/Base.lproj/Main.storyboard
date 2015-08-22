@@ -669,7 +669,7 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="GPUImageSandBox" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="975" height="392"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1278" height="392"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8e-J8-5QM">
@@ -736,6 +736,22 @@
                                     </customView>
                                 </subviews>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FAt-89-YhZ">
+                                <rect key="frame" x="983" y="232" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJ8-d5-ky5">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="M5Y-m8-nlV">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5LE-vu-gfM" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LYz-YR-kTH">
                                 <rect key="frame" x="490" y="73" width="240" height="160"/>
                                 <subviews>
@@ -768,6 +784,22 @@
                                     </customView>
                                 </subviews>
                             </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aLd-W3-61e">
+                                <rect key="frame" x="0.0" y="73" width="240" height="160"/>
+                                <subviews>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzV-MY-zPu">
+                                        <rect key="frame" x="-2" y="0.0" width="244" height="32"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="cwK-Mf-R20">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n2g-aI-qlD" customClass="GPUImageView">
+                                        <rect key="frame" x="0.0" y="40" width="240" height="120"/>
+                                    </customView>
+                                </subviews>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
@@ -775,11 +807,12 @@
                         <outlet property="screen1" destination="sc6-0P-7ri" id="moi-XF-ZRa"/>
                         <outlet property="screen2" destination="FY4-1h-u5z" id="RVm-lX-4Ji"/>
                         <outlet property="screen3" destination="B1k-K6-Lhi" id="xfb-5H-ITp"/>
+                        <outlet property="screen4" destination="5LE-vu-gfM" id="sZU-5W-d1K"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="245.5" y="759"/>
+            <point key="canvasLocation" x="397" y="759"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="892-oc-bbH">

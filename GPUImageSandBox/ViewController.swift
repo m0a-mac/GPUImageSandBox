@@ -18,11 +18,13 @@ class ViewController: NSViewController {
     @IBOutlet var screen1 : GPUImageView!
     @IBOutlet weak var screen2: GPUImageView!
     @IBOutlet weak var screen3: GPUImageView!
+    @IBOutlet weak var screen4: GPUImageView!
     
     var filter0: GPUImagePolkaDotFilter?
     var filter1: GPUImageGrayscaleFilter?
     var filter2: GPUImageBrightnessFilter?
     var filter3: GPUImageExposureFilter?
+    var filter4: GPUImageColorInvertFilter?
 
     
     override func viewDidLoad() {
@@ -41,11 +43,14 @@ class ViewController: NSViewController {
         filter3 = GPUImageExposureFilter()
         filter3?.exposure = 8.0
         
+        filter4 = GPUImageColorInvertFilter()
+        
         
         videoCamera?.addTarget(filter0)
         videoCamera?.addTarget(filter1)
         videoCamera?.addTarget(filter2)
         videoCamera?.addTarget(filter3)
+//        videoCamera?.addTarget(filter4)
         
         
         filter0?.addTarget(screen0)
@@ -53,16 +58,21 @@ class ViewController: NSViewController {
         filter2?.addTarget(screen2)
         filter3?.addTarget(screen3)
         
+        filter1?.addTarget(filter4)
+        
         filter3?.frameProcessingCompletionBlock = { (output:GPUImageOutput!, time:CMTime)  in
             print("run comp block\n")
         }
         
+        filter4?.setInputRotation(<#T##newInputRotation: GPUImageRotationMode##GPUImageRotationMode#>, atIndex: <#T##Int#>)
+        filter4?.addTarget(screen4)
         
         
         screen0?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         screen1?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         screen2?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         screen3?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
+        screen4?.setInputRotation(kGPUImageFlipHorizonal, atIndex: 0)
         
         
         
