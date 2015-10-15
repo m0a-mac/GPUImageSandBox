@@ -13,6 +13,7 @@ import GPUImage
 class ViewController: NSViewController {
 
     var videoCamera: GPUImageAVCamera?
+//    var sampleVideo: GPUImageMovie?
     
     @IBOutlet var screen0 : GPUImageView!
     @IBOutlet var screen1 : GPUImageView!
@@ -33,6 +34,13 @@ class ViewController: NSViewController {
         videoCamera = GPUImageAVCamera(sessionPreset: AVCaptureSessionPreset320x240, cameraDevice:nil)
         videoCamera?.horizontallyMirrorRearFacingCamera = false
         videoCamera?.horizontallyMirrorFrontFacingCamera = false
+        
+//        sampleVideo = GPUImageMovieWriter.
+
+        
+        
+//        let movieFile = GPUImageMovi
+//        movieFile.playAtActualSpeed = true
         
         filter0 = GPUImagePolkaDotFilter()
         filter1 = GPUImageGrayscaleFilter()
@@ -64,7 +72,7 @@ class ViewController: NSViewController {
             print("run comp block\n")
         }
         
-        filter4?.setInputRotation(<#T##newInputRotation: GPUImageRotationMode##GPUImageRotationMode#>, atIndex: <#T##Int#>)
+//        filter4?.setInputRotation(<#T##newInputRotation: GPUImageRotationMode##GPUImageRotationMode#>, atIndex: <#T##Int#>)
         filter4?.addTarget(screen4)
         
         
